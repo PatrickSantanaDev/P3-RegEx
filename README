@@ -1,0 +1,37 @@
+# Project 3: Regular Expressions 
+
+* Author: Patrick Santana, Austin Nelson
+* Class: CS361 Section 002
+* Semester: Fall 2022
+
+## Overview
+
+This java application takes in a specifically formatted input file that contains a
+regular expression then converts it to an equivalent NFA. This application 
+uses the recursive descent parsing algorithm to parse the regex. 
+
+## Reflection
+
+This project went relatively smoothly and wasn't so much about coming up with our own process of being able to parse through a regex but being able to look at the code provided and truly understand it. It definitely took some time, and was the most time consuming part, to be able to understand the structure of a regular expression and how the recursive descent parsing algorithm worked. Once we gained a general intuition about it and the structure of the regex, the actual implementing part was not very time consuming. Converting the code from an explicit parse tree to an NFA was a little difficult but when we figured out connecting the final state of one machine to the start of another using the epsilon transition, it clicked!
+
+The source that explained the algorithm was very good in explaining how it worked and the different breakdowns of a regex, which was something that worked very well. Understanding the structure was a struggle at the same time because it has a lot of different moving parts but learning about it was interesting as well as engaging. Nothing was overwhelming unclear at the end of the project, but we noticed the source said not all grammars are suitable for recursive descent, but we couldn't think of any examples that couldn't be refactored like it talked about. Like I said previously, this was a very fun algorithm to learn about because at first glance, we both didn't think there was an actual "format" to a regex that could be broken down and parsed through. 
+
+We didn't run into too many issues with testing our code, besides edge cases that we covered when we thought of them. One thing we would change with this project, we said this in our last reflection, but using Git branches for our development and merging them together at certain points. This is something we don't entirely understand but would make development in groups (or partners) much more efficient. Something that would be changed the next time around was working on this project in advance to the due date because it was around a busy time during school and felt overwhelming at first. 
+
+## Compiling and Using
+
+To compile, execute the following command in the main project directory:
+```
+$ javac -cp ".:./CS361FA.jar" re/REDriver.java
+```
+Run the compiled class with the command:
+```
+$ java -cp ".:./CS361.jar" re.REDriver <test file location>
+```
+Test file takes the format:
+First line - regular expression consisting only of: a, b, e, |, (, ) and *
+Second line onward - input strings to test if they are in the language of the regex 
+
+## Sources used
+Parsing Regular Expresions with Recursive Descent - https://matt.might.net/articles/parsing-regex-with-recursive-descent/
+
